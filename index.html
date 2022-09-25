@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acuthe | Accurate Weather</title>
+    <meta name="description" content="Get real-time weather alerts for your area, with acuthe.">
+    <meta name="theme-color" content="#FFFFFF">
+    <meta property="og:locale" content="en">
+    <meta property="og:site_name" content="acuthe">
+    <meta property="og:title" content="acuthe">
+    <meta property="og:image" content="https://tallerthanshort.github.io/ut3.ggpht/icons/acuthe.png">
+    <meta property="og:description" content="Get real-time weather updates and alerts all in one app | acuthe - free accurate weather for the world">
+    <link rel="icon" href="https://tallerthanshort.github.io/ut3.ggpht/icons/acuthe.png" data-react-helmet="true">
+    <link rel="apple-touch-icon" href="/icons/apple-icon-180.png">
+    <link rel="shortcut-icon" href="https://tallerthanshort.github.io/ut3.ggpht/icons/acuthe.png">
+    <link rel="canonical" href="https://tallerthanshort.github.io/acuthe/">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body style="background-color: #5B5B5B; color: white;">
+    <div id="src_data">
+        <p id="current">It's Prolly Sunny rn</p>
+    </div>
+    <div id="refresh_button_container"></div>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/service-worker.js');
+        }
+    </script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="reactor.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
