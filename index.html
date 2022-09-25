@@ -19,10 +19,14 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body style="background-color: #5B5B5B; color: white;">
-    <div id="src_data">
+    <div id="title" style="background-color: black; width: 100%; position: fixed; top: 0; left: 0;">
+        <img src="https://tallerthanshort.github.io/ut3.ggpht/icons/acuthe.png" style="position: relative; width: 64px; height: 64px;">
+        <h2 style="position: absolute; top: 0; left: 122px;">acuthe</h2>
+    </div>
+    <div id="src_data" style="position: relative; top: 72px;">
         <p id="current">It's Prolly Sunny rn</p>
     </div>
-    <div id="refresh_button_container"></div>
+    <div id="refresh_button_container" style="position: relative; top: 75px;"></div>
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/service-worker.js');

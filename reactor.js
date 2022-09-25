@@ -10,7 +10,7 @@ class LikeButton extends React.Component {
 
   render() {
     if (this.state.clicked) {
-      return 'Error: No Source Code to Fetch Data .';
+      return 'Error: No Source Code to Fetch Data.';
     }
 
     return e(
