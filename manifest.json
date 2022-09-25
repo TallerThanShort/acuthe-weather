@@ -1,7 +1,7 @@
 {
     "name": "acuthe weather",
     "short_name": "acuthe",
-    "start_url": "/acuthe",
+    "start_url": "/?acuthe=acuthe",
     "lang": "en-GB",
     "icons": [
         {
