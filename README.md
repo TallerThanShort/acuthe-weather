@@ -11,9 +11,9 @@ The main idea is pretty simple, free platform that reports weather predictions w
 ### Dependencies
 - HTML
 - JS
-- React
+- Materialize
 - Workbox
-- CSS
+- Firebase
 - The MeteoCat API
 - VS3
 
