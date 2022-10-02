@@ -11,19 +11,18 @@ const stormy = `<img title="stormy" src="https://www.reshot.com/preview-assets/i
 
 //Import Firebase Shid
 const firebaseConfig = {
-    apiKey: "AIzaSyCAq_dJofuaue2J3OOyMXUa2J_-STGJjG4",
-    //authDomain: "acuthe-weather.firebaseapp.com",
+    apiKey: "AI-inserted.Key",
     projectId: "acuthe-weather",
     storageBucket: "acuthe-weather.appspot.com",
-    messagingSenderId: "692554729727",
-    appId: "1:692554729727:web:f086aac789ac2b6b9224ca"
+    messagingSenderId: "69255469729769",
+    appId: "1:692554729727:android:f086aac789ac2b6b9224ca"
 };
 
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 db.settings({ timestampsInSnapshots: true });
 
-//start making weather predictions pls
+//start making weather predictions pls *wtf are these comments lmfao
 db.collection('weather').doc('current').get().then(doc => {
     const detailed = doc.data();
     if(detailed.icon === 'sun'){
@@ -31,13 +30,13 @@ db.collection('weather').doc('current').get().then(doc => {
     } else if(detailed.icon === 'wind'){
         currentWeatherIcon.innerHTML = windy;
     } else if(detailed.icon === 'cloud'){
-        currentWeatherIcon.innerHTML = cloudy;
+        currentWeatherIcon.innerHTML = `${cloudy} <p style="font-size: 32px; margin-top: -62px; margin-left: 89px;">${detailed.temp}°C</p>`;
     } else if(detailed.icon === 'rain'){
         currentWeatherIcon.innerHTML = rainy;
     } else if(detailed.icon === 'storm'){
         currentWeatherIcon.innerHTML = stormy;
     }
-    currentWeather.innerText = `${detailed.detail}; ${detailed.temp}°C`
+    currentWeather.innerText = `It's currently ${detailed.detail}`
 })
 
 //simple function to write this shid faster
